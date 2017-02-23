@@ -1,4 +1,11 @@
 # React / Typescript
 
-A basic skeleton of a React & Typescript project.
+A basic skeleton for a React & Typescript project.
+
+```
+$ npm install
+$ npm run start
+
+// go to http://localhost:8080/
+```
 
