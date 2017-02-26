@@ -1,5 +1,5 @@
 module.exports = {
-  devtool: 'source-map',
+  devtool: 'inline-source-map',
   entry: {
     main: './src/app/main.tsx'
   },
@@ -11,10 +11,21 @@ module.exports = {
     extensions: ['.ts', '.tsx', '.js']
   },
   module: {
-    loaders: [
+    rules: [
+      {
+        enforce: 'pre',
+        test: /\.js$/,
+        loader: "source-map-loader",
+        exclude: [
+          /node_modules/
+        ]
+      },
       {
         test: /\.tsx?$/,
-        loader: 'ts-loader'
+        loader: 'ts-loader',
+        exclude: [
+          /node_modules/
+        ]
       }
     ]
   }

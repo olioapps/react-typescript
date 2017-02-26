@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "target": "es5",
-    "jsx": "react"
+    "jsx": "react",
+    "noImplicitAny": true,
+    "sourceMap": true
   },
   "include": [
     "src"
