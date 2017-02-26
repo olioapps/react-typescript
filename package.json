@@ -6,7 +6,8 @@
   "scripts": {
     "build": "webpack ./webpack.config.js",
     "start": "webpack-dev-server ./webpack.config.js --no-info --hot --inline --content-base ./public",
-    "lint": "tslint src/**/*.tsx"
+    "lint": "tslint src/**/*.tsx",
+    "fmt": "tsfmt -r"
   },
   "keywords": [],
   "author": "http://www.olioapps.com/",
@@ -23,6 +24,7 @@
     "tslint-react": "2.4.0",
     "typed-immutable-record": "0.0.6",
     "typescript": "2.2.1",
+    "typescript-formatter": "^4.1.2",
     "webpack": "2.2.1",
     "webpack-dev-server": "2.4.1"
   }
