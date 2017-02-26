@@ -1,5 +1,6 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import App from '../components/app'
 
 import {
   recordify,
@@ -47,11 +48,6 @@ const skywalkerRecord = recordify<IPerson, IPersonRecord>({
 
 // property autocompletion works, set() works, etc...
 const updatedSkywalker = skywalkerRecord.set('name', 'Duke Piewalker')
-
-// typed stateless component
-const App: React.StatelessComponent<{ message: string }> =
-  ({ message }) => <div>{message}</div>
-App.displayName = "MyApp"
 
 ReactDOM.render(
   <App message={`${updatedSkywalker.name} - ${updatedSkywalker.pet.name}`} />,
