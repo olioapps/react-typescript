@@ -20,8 +20,8 @@ interface IPerson {
 }
 
 // create some typed immutable records w/ "TypedRecord"
-interface IPetRecord extends TypedRecord<IPetRecord>, IPet {}
-interface IPersonRecord extends TypedRecord<IPersonRecord>, IPerson {}
+interface IPetRecord extends TypedRecord<IPetRecord>, IPet { }
+interface IPersonRecord extends TypedRecord<IPersonRecord>, IPerson { }
 
 // create a factory with property defaults w/ "makeTypedFactory"
 const LukeRecordFactory = makeTypedFactory<IPerson, IPersonRecord>({
