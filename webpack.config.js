@@ -8,7 +8,11 @@ module.exports = {
     filename: 'build/[name].js'
   },
   resolve: {
-    extensions: ['.ts', '.tsx', '.js']
+    extensions: ['.ts', '.tsx', '.js'],
+    modules: [
+      'node_modules',
+      __dirname + '/src'
+    ]
   },
   module: {
     rules: [
