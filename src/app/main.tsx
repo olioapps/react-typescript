@@ -48,4 +48,12 @@ const skywalkerRecord = recordify<IPerson, IPersonRecord>({
 // property autocompletion works, set() works, etc...
 const updatedSkywalker = skywalkerRecord.set('name', 'Duke Piewalker')
 
-ReactDOM.render(<div>{updatedSkywalker.name} - {updatedSkywalker.pet.name}</div>, document.getElementById('root'))
+// typed stateless component
+const App: React.StatelessComponent<{ message: string }> =
+  ({ message }) => <div>{message}</div>
+App.displayName = "MyApp"
+
+ReactDOM.render(
+  <App message={`${updatedSkywalker.name} - ${updatedSkywalker.pet.name}`} />,
+  document.getElementById('root')
+)
