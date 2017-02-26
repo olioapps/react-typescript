@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "build": "webpack ./webpack.config.js",
-    "start": "webpack-dev-server ./webpack.config.js --no-info --hot --inline --content-base ./public"
+    "start": "webpack-dev-server ./webpack.config.js --no-info --hot --inline --content-base ./public",
+    "lint": "tslint src/**/*.tsx"
   },
   "keywords": [],
   "author": "http://www.olioapps.com/",
@@ -18,6 +19,8 @@
     "react-dom": "15.4.2",
     "source-map-loader": "0.1.6",
     "ts-loader": "2.0.1",
+    "tslint": "4.4.2",
+    "tslint-react": "2.4.0",
     "typed-immutable-record": "0.0.6",
     "typescript": "2.2.1",
     "webpack": "2.2.1",
