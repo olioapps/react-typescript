@@ -33,10 +33,6 @@ const master = LukeRecordFactory({
   name: 'Master Luke',
 })
 
-const councilMaster = LukeRecordFactory({
-  name: 'Council Master Luke',
-})
-
 // create an pet instance child record w/ 'recordify', without prior defaults/factory
 const skywalkerRecord = recordify<IPerson, IPersonRecord>({
   name: 'Luke Skywalker',
@@ -50,6 +46,6 @@ const skywalkerRecord = recordify<IPerson, IPersonRecord>({
 const updatedSkywalker = skywalkerRecord.set('name', 'Duke Piewalker')
 
 ReactDOM.render(
-  <App message={`${updatedSkywalker.name} - ${updatedSkywalker.pet.name}`} />,
+  <App message={`${master.name} - ${updatedSkywalker.pet && updatedSkywalker.pet.name}`} />,
   document.getElementById('root')
 )
