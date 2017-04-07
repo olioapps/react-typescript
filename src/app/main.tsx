@@ -1,5 +1,8 @@
 import * as React from 'react'
 import * as ReactDOM from 'react-dom'
+import { Intent, Spinner } from "@blueprintjs/core";
+
+import '../styles/app.css';
 
 import {
   recordify,
@@ -47,5 +50,6 @@ const skywalkerRecord = recordify<IPerson, IPersonRecord>({
 
 // property autocompletion works, set() works, etc...
 const updatedSkywalker = skywalkerRecord.set('name', 'Duke Piewalker')
+const mySpinner = <Spinner intent={Intent.PRIMARY} />;
 
-ReactDOM.render(<div>{updatedSkywalker.name} - {updatedSkywalker.pet.name}</div>, document.getElementById('root'))
+ReactDOM.render(<div>{updatedSkywalker.name} - {updatedSkywalker.pet.name} - spinner: {mySpinner}</div>, document.getElementById('root'))
